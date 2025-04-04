@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productCol.innerHTML = `
           <div class="card h-100 product-card">
             <div class="card-img-container d-flex justify-content-center align-items-center py-4" style="height: 200px;">
-              <a href="item_page.html?id=${
+              <a href="/melshop/item_page.html?id=${
                 product.id
               }" class="d-flex justify-content-center align-items-center">
                 <img class="card-img-top img-fluid mx-auto" src="${
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="card-body p-4">
               <div class="text-center">
-                <a href="item_page.html?id=${
+                <a href="/melshop/item_page.html?id=${
                   product.id
                 }" class="text-decoration-none text-dark">
                   <h5 class="fw-bolder">${product.title}</h5>
@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         productContainer.appendChild(productCol);
       });
 
-      // Lägg till event listeners för "Add to cart"
       document.querySelectorAll(".buy-button").forEach((button) => {
         button.addEventListener("click", (event) => {
           const product = {
